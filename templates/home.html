@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>BISHARP ACESSÓRIOS</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+        }
+
+        .header {
+            background-color: #87dced;
+            color: white;
+            padding: 20px;
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #03021b;
+            padding: 14px 16px;
+            border: 0,5px  4mm ridge #87dced;;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .main {
+            margin: 16px;
+        }
+
+        .product {
+            background-color: #feffff;
+            border: 0,5px  4mm ridge #87dced;;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 10px;
+            width: calc(33.3% - 16px);
+        }
+
+        .product img {
+            max-width: 200px;
+            
+        }
+
+        .product button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: 10px  4mm ridge #87dced;;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #87dced;
+            color: white;
+            padding: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BISHARP ACESSÓRIOS</h1>
+    </div>
+
+    <div class="nav">
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+    </div>
+
+    <div class="main">
+        <div class="product">
+            <!-- Adiciona imagem-->
+            <img src="{{ url_for('static', filename='cordao.jpg') }}" alt="Cordão" width="300" height="200">
+            <div>
+                <h3>Cordão Masculino Aço Inox</h3>
+                <p> Disponível em diferentes tamanhos para se ajustar perfeitamente ao seu pulso.
+                    </p>
+                    <p>Cor: Prateada (aço inoxidável natural)</p>
+                    <p>Peso: Leve
+                    </p>
+                <p>R$ 100,00</p>
+            </div>
+            <button>Comprar</button>
+        </div>
+        <div class="product">
+            <!-- Adiciona imagem-->
+            <img src="{{ url_for('static', filename='pulseira.jpeg') }}" alt="Pulseira" width="300" height="200">
+            <div>
+                <h3>Pulseira Masculina Aço Inox</h3>
+                <p> Disponível em diferentes tamanhos para se ajustar perfeitamente ao seu pulso.
+                    </p>
+                    <p>Cor: Prateada (aço inoxidável natural)</p>
+                    <p>Peso: Leve
+                    </p>
+                <p>R$ 100,00</p>
+            </div>
+            <button>Comprar</button>
+        </div>
+        <!-- Repita o elemento .product para cada produto -->
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 BisharpAcessórios. Todos os direitos reservados.</p>
+    </div>
+</body>
+</html>
+{% endblock %}
